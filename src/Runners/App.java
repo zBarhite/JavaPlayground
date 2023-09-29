@@ -16,7 +16,7 @@ public class App implements returnStatus{
         return new AppSubclass();
     }
     public String reportStatus(){
-        return "Probably good :)";
+        return "I've made a change to the code";
     }
     public int processedRequests(){
         return 0;
