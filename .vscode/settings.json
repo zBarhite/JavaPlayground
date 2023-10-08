@@ -2,6 +2,14 @@
     "java.project.sourcePaths": ["src"],
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
-        "lib/**/*.jar"
+        "lib/**/*.jar",
+        "/home/second/Documents/VSCodeJava/JavaFx/javafx-sdk-21/lib/javafx.base.jar",
+        "/home/second/Documents/VSCodeJava/JavaFx/javafx-sdk-21/lib/javafx.controls.jar",
+        "/home/second/Documents/VSCodeJava/JavaFx/javafx-sdk-21/lib/javafx.fxml.jar",
+        "/home/second/Documents/VSCodeJava/JavaFx/javafx-sdk-21/lib/javafx.graphics.jar",
+        "/home/second/Documents/VSCodeJava/JavaFx/javafx-sdk-21/lib/javafx.media.jar",
+        "/home/second/Documents/VSCodeJava/JavaFx/javafx-sdk-21/lib/javafx.swing.jar",
+        "/home/second/Documents/VSCodeJava/JavaFx/javafx-sdk-21/lib/javafx.web.jar",
+        "/home/second/Documents/VSCodeJava/JavaFx/javafx-sdk-21/lib/javafx-swt.jar"
     ]
 }

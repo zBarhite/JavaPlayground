@@ -8,13 +8,23 @@
             "type": "java",
             "name": "Current File",
             "request": "launch",
-            "mainClass": "${file}"
+            "mainClass": "${file}",
+            "vmArgs": "--module-path /home/second/Documents/VSCodeJava/JavaFx/javafx-sdk-21/lib --add-modules javafx.controls,javafx.fxml",
+
         },
         {
             "type": "java",
             "name": "App",
             "request": "launch",
             "mainClass": "App",
+            "projectName": "JavaPlayground_69237e"
+
+        },
+        {
+            "type": "java",
+            "name": "RandomCards",
+            "request": "launch",
+            "mainClass": "JavaFx.RandomCards",
             "projectName": "JavaPlayground_69237e"
         }
     ]
