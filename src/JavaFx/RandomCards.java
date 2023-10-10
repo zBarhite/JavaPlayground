@@ -1,7 +1,6 @@
 package JavaFx;
 
 import java.util.Random;
-
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -12,17 +11,14 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 public class RandomCards extends Application{
-
     //Change this value to anything from 1-52
-    static int cardsToShow = 52;
-
-    static int cardsShown = 0;
-    static int[] rand;
+    static int cardsToShow = 7;
+    
+    private static int cardsShown = 0;
+    private static int[] rand;
     @Override
     public void start(Stage primaryStage){
         Pane pane = new FlowPane();
-        double width = 175 + 225*cardsToShow;
-        Scene scene = new Scene(pane, width, 400);
         Image cardBackImg = new Image("backCard.png");
         Button refreshButton = new Button("-DEAL NEW CARDS-");
         pane.getChildren().add(refreshButton);
@@ -39,19 +35,16 @@ public class RandomCards extends Application{
             for(int c=1;c<cardsToShow+1;c++){
                 ((ImageView)cards[c]).setImage(cardBackImg);
                 ((ImageView)cards[c]).setOnMousePressed(a->{
-                    if((RandomCards.cardsShown<cardsToShow ) && ((ImageView)a.getSource()).getImage().equals(cardBackImg)){
-                        String randomPath = String.valueOf(getNextCard()+".png");
-                        Image randomCard = new Image(randomPath);
-                        ((ImageView)(a.getSource())).setImage(randomCard);
-                    }
+                    if((RandomCards.cardsShown<cardsToShow ) && ((ImageView)a.getSource()).getImage().equals(cardBackImg))
+                        {((ImageView)a.getSource()).setImage(new Image(String.valueOf(getNextCard()+".png")));}
                 });
             }
         });
         refreshButton.fire();
-        primaryStage.setScene(scene);
+        primaryStage.setScene(new Scene(pane, 175 + 225*cardsToShow, 300));
         primaryStage.show();
     }
-    public static int getNextCard()
+    private static int getNextCard()
         {return rand[RandomCards.cardsShown++];}  
     public static void main(String[] args)
         {launch(args);} 
